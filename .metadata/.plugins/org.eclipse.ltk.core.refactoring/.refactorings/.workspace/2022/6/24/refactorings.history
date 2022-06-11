@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;STM32F103C6 GPIO INPUT OUTPUT LIBRARY&apos; to &apos;STM32F103C6 REGISTERS LIBRARY&apos;" description="Rename resource &apos;STM32F103C6 GPIO INPUT OUTPUT LIBRARY&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/STM32F103C6 GPIO INPUT OUTPUT LIBRARY" name="STM32F103C6 REGISTERS LIBRARY" stamp="1654931870045" updateReferences="true"/>
-</session>
