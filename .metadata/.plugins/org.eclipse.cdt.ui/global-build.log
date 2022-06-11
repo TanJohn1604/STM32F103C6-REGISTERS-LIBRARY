@@ -516,3 +516,187 @@ Finished building: STM32F103C6 REGISTERS LIBRARY.bin
 Finished building: STM32F103C6 REGISTERS LIBRARY.list
  
  
+22:20:51 **** Incremental Build of configuration Debug for project STM32F103C6 REGISTERS LIBRARY ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Core/Include" -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx" -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Inc/gpio.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Core/Include" -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx" -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Inc/gpio.d" -MT"Inc/gpio.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Inc/gpio.o"
+arm-none-eabi-gcc "../Inc/interrupt_PA0.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Core/Include" -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx" -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Inc/interrupt_PA0.d" -MT"Inc/interrupt_PA0.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Inc/interrupt_PA0.o"
+arm-none-eabi-gcc "../Inc/system_clock.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Core/Include" -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx" -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Inc/system_clock.d" -MT"Inc/system_clock.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Inc/system_clock.o"
+arm-none-eabi-gcc "../Inc/systick_deay.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Core/Include" -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx" -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Inc/systick_deay.d" -MT"Inc/systick_deay.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Inc/systick_deay.o"
+arm-none-eabi-gcc "../Inc/systick_interrupt.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Core/Include" -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx" -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Inc/systick_interrupt.d" -MT"Inc/systick_interrupt.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Inc/systick_interrupt.o"
+../Inc/systick_interrupt.c: In function 'init_systick_delay':
+../Inc/systick_interrupt.c:11:2: error: 'SysTick' undeclared (first use in this function)
+   11 |  SysTick->CTRL =0;
+      |  ^~~~~~~
+../Inc/systick_interrupt.c:11:2: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [Inc/subdir.mk:31: Inc/systick_interrupt.o] Error 1
+make: *** Waiting for unfinished jobs....
+../Src/main.c: In function 'main':
+../Src/main.c:33:2: warning: implicit declaration of function 'init_systick_delay' [-Wimplicit-function-declaration]
+   33 |  init_systick_delay();
+      |  ^~~~~~~~~~~~~~~~~~
+../Src/main.c:38:2: warning: implicit declaration of function 'delayms'; did you mean 'delay_ms'? [-Wimplicit-function-declaration]
+   38 |  delayms(500);
+      |  ^~~~~~~
+      |  delay_ms
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+22:21:29 **** Incremental Build of configuration Debug for project STM32F103C6 REGISTERS LIBRARY ****
+make -j8 all 
+arm-none-eabi-gcc "../Inc/systick_interrupt.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Core/Include" -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx" -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Inc/systick_interrupt.d" -MT"Inc/systick_interrupt.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Inc/systick_interrupt.o"
+arm-none-eabi-gcc -o "STM32F103C6 REGISTERS LIBRARY.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Project STMf103c6\STM32F103C6 GPIO INPUT OUTPUT LIBRARY\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F103C6 REGISTERS LIBRARY.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+c:\st\stm32cubeide_1.8.0\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_2.0.0.202105311346\tools\arm-none-eabi\bin\ld.exe: ./Inc/systick_interrupt.o: in function `init_systick_delay':
+D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Debug/../Inc/systick_interrupt.c:8: multiple definition of `init_systick_delay'; ./Inc/systick_deay.o:D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Debug/../Inc/systick_deay.c:11: first defined here
+collect2.exe: error: ld returned 1 exit status
+make: *** [makefile:64: STM32F103C6 REGISTERS LIBRARY.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+22:22:09 **** Incremental Build of configuration Debug for project STM32F103C6 REGISTERS LIBRARY ****
+make -j8 all 
+arm-none-eabi-gcc "../Inc/systick_interrupt.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Core/Include" -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx" -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Inc/systick_interrupt.d" -MT"Inc/systick_interrupt.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Inc/systick_interrupt.o"
+arm-none-eabi-gcc -o "STM32F103C6 REGISTERS LIBRARY.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Project STMf103c6\STM32F103C6 GPIO INPUT OUTPUT LIBRARY\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F103C6 REGISTERS LIBRARY.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32F103C6 REGISTERS LIBRARY.elf
+ 
+arm-none-eabi-size   STM32F103C6\ REGISTERS\ LIBRARY.elf 
+arm-none-eabi-objdump -h -S  STM32F103C6\ REGISTERS\ LIBRARY.elf  > "STM32F103C6 REGISTERS LIBRARY.list"
+arm-none-eabi-objcopy  -O binary  STM32F103C6\ REGISTERS\ LIBRARY.elf  "STM32F103C6 REGISTERS LIBRARY.bin"
+   text	   data	    bss	    dec	    hex	filename
+   1548	      8	   1568	   3124	    c34	STM32F103C6 REGISTERS LIBRARY.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32F103C6 REGISTERS LIBRARY.list
+ 
+Finished building: STM32F103C6 REGISTERS LIBRARY.bin
+ 
+22:33:44 **** Incremental Build of configuration Debug for project STM32F103C6 REGISTERS LIBRARY ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Core/Include" -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx" -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc "../Inc/systick_deay.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Core/Include" -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx" -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Inc/systick_deay.d" -MT"Inc/systick_deay.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Inc/systick_deay.o"
+arm-none-eabi-gcc "../Inc/systick_interrupt.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Core/Include" -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx" -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Inc/systick_interrupt.d" -MT"Inc/systick_interrupt.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Inc/systick_interrupt.o"
+../Src/main.c: In function 'main':
+../Src/main.c:34:2: warning: implicit declaration of function 'init_systick_interrupt' [-Wimplicit-function-declaration]
+   34 |  init_systick_interrupt(500);
+      |  ^~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "STM32F103C6 REGISTERS LIBRARY.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Project STMf103c6\STM32F103C6 GPIO INPUT OUTPUT LIBRARY\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F103C6 REGISTERS LIBRARY.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32F103C6 REGISTERS LIBRARY.elf
+ 
+arm-none-eabi-size   STM32F103C6\ REGISTERS\ LIBRARY.elf 
+arm-none-eabi-objdump -h -S  STM32F103C6\ REGISTERS\ LIBRARY.elf  > "STM32F103C6 REGISTERS LIBRARY.list"
+arm-none-eabi-objcopy  -O binary  STM32F103C6\ REGISTERS\ LIBRARY.elf  "STM32F103C6 REGISTERS LIBRARY.bin"
+   text	   data	    bss	    dec	    hex	filename
+   1500	      8	   1568	   3076	    c04	STM32F103C6 REGISTERS LIBRARY.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32F103C6 REGISTERS LIBRARY.bin
+Finished building: STM32F103C6 REGISTERS LIBRARY.list
+ 
+ 
+22:33:57 **** Incremental Build of configuration Debug for project STM32F103C6 REGISTERS LIBRARY ****
+make -j8 all 
+arm-none-eabi-size   STM32F103C6\ REGISTERS\ LIBRARY.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1500	      8	   1568	   3076	    c04	STM32F103C6 REGISTERS LIBRARY.elf
+Finished building: default.size.stdout
+ 
+22:34:44 **** Incremental Build of configuration Debug for project STM32F103C6 REGISTERS LIBRARY ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Core/Include" -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx" -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:34:2: warning: implicit declaration of function 'init_systick_interrupt' [-Wimplicit-function-declaration]
+   34 |  init_systick_interrupt(1000);
+      |  ^~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "STM32F103C6 REGISTERS LIBRARY.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Project STMf103c6\STM32F103C6 GPIO INPUT OUTPUT LIBRARY\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F103C6 REGISTERS LIBRARY.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32F103C6 REGISTERS LIBRARY.elf
+ 
+arm-none-eabi-size   STM32F103C6\ REGISTERS\ LIBRARY.elf 
+arm-none-eabi-objdump -h -S  STM32F103C6\ REGISTERS\ LIBRARY.elf  > "STM32F103C6 REGISTERS LIBRARY.list"
+arm-none-eabi-objcopy  -O binary  STM32F103C6\ REGISTERS\ LIBRARY.elf  "STM32F103C6 REGISTERS LIBRARY.bin"
+   text	   data	    bss	    dec	    hex	filename
+   1500	      8	   1568	   3076	    c04	STM32F103C6 REGISTERS LIBRARY.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32F103C6 REGISTERS LIBRARY.bin
+Finished building: STM32F103C6 REGISTERS LIBRARY.list
+ 
+ 
+22:36:07 **** Incremental Build of configuration Debug for project STM32F103C6 REGISTERS LIBRARY ****
+make -j8 all 
+arm-none-eabi-size   STM32F103C6\ REGISTERS\ LIBRARY.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1500	      8	   1568	   3076	    c04	STM32F103C6 REGISTERS LIBRARY.elf
+Finished building: default.size.stdout
+ 
+22:40:45 **** Incremental Build of configuration Debug for project STM32F103C6 REGISTERS LIBRARY ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Core/Include" -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx" -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:34:2: warning: implicit declaration of function 'init_systick_interrupt' [-Wimplicit-function-declaration]
+   34 |  init_systick_interrupt(3000);
+      |  ^~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "STM32F103C6 REGISTERS LIBRARY.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Project STMf103c6\STM32F103C6 GPIO INPUT OUTPUT LIBRARY\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F103C6 REGISTERS LIBRARY.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32F103C6 REGISTERS LIBRARY.elf
+ 
+arm-none-eabi-size   STM32F103C6\ REGISTERS\ LIBRARY.elf 
+arm-none-eabi-objdump -h -S  STM32F103C6\ REGISTERS\ LIBRARY.elf  > "STM32F103C6 REGISTERS LIBRARY.list"
+arm-none-eabi-objcopy  -O binary  STM32F103C6\ REGISTERS\ LIBRARY.elf  "STM32F103C6 REGISTERS LIBRARY.bin"
+   text	   data	    bss	    dec	    hex	filename
+   1500	      8	   1568	   3076	    c04	STM32F103C6 REGISTERS LIBRARY.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32F103C6 REGISTERS LIBRARY.bin
+Finished building: STM32F103C6 REGISTERS LIBRARY.list
+ 
+ 
+22:48:45 **** Incremental Build of configuration Debug for project STM32F103C6 REGISTERS LIBRARY ****
+make -j8 all 
+arm-none-eabi-gcc "../Inc/systick_interrupt.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Core/Include" -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx" -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Inc/systick_interrupt.d" -MT"Inc/systick_interrupt.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Inc/systick_interrupt.o"
+arm-none-eabi-gcc -o "STM32F103C6 REGISTERS LIBRARY.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Project STMf103c6\STM32F103C6 GPIO INPUT OUTPUT LIBRARY\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F103C6 REGISTERS LIBRARY.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32F103C6 REGISTERS LIBRARY.elf
+ 
+arm-none-eabi-size   STM32F103C6\ REGISTERS\ LIBRARY.elf 
+arm-none-eabi-objdump -h -S  STM32F103C6\ REGISTERS\ LIBRARY.elf  > "STM32F103C6 REGISTERS LIBRARY.list"
+arm-none-eabi-objcopy  -O binary  STM32F103C6\ REGISTERS\ LIBRARY.elf  "STM32F103C6 REGISTERS LIBRARY.bin"
+   text	   data	    bss	    dec	    hex	filename
+   1500	      8	   1568	   3076	    c04	STM32F103C6 REGISTERS LIBRARY.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32F103C6 REGISTERS LIBRARY.bin
+Finished building: STM32F103C6 REGISTERS LIBRARY.list
+ 
+ 
+22:51:02 **** Incremental Build of configuration Debug for project STM32F103C6 REGISTERS LIBRARY ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Core/Include" -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx" -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:34:2: warning: implicit declaration of function 'init_systick_interrupt' [-Wimplicit-function-declaration]
+   34 |  init_systick_interrupt(1000);
+      |  ^~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "STM32F103C6 REGISTERS LIBRARY.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Project STMf103c6\STM32F103C6 GPIO INPUT OUTPUT LIBRARY\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F103C6 REGISTERS LIBRARY.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32F103C6 REGISTERS LIBRARY.elf
+ 
+arm-none-eabi-size   STM32F103C6\ REGISTERS\ LIBRARY.elf 
+arm-none-eabi-objdump -h -S  STM32F103C6\ REGISTERS\ LIBRARY.elf  > "STM32F103C6 REGISTERS LIBRARY.list"
+arm-none-eabi-objcopy  -O binary  STM32F103C6\ REGISTERS\ LIBRARY.elf  "STM32F103C6 REGISTERS LIBRARY.bin"
+   text	   data	    bss	    dec	    hex	filename
+   1500	      8	   1568	   3076	    c04	STM32F103C6 REGISTERS LIBRARY.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32F103C6 REGISTERS LIBRARY.bin
+Finished building: STM32F103C6 REGISTERS LIBRARY.list
+ 
+ 
+22:52:45 **** Incremental Build of configuration Debug for project STM32F103C6 REGISTERS LIBRARY ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Core/Include" -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx" -I"D:/Project STMf103c6/STM32F103C6 GPIO INPUT OUTPUT LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "STM32F103C6 REGISTERS LIBRARY.elf" @"objects.list"   -mcpu=cortex-m3 -T"D:\Project STMf103c6\STM32F103C6 GPIO INPUT OUTPUT LIBRARY\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F103C6 REGISTERS LIBRARY.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: STM32F103C6 REGISTERS LIBRARY.elf
+ 
+arm-none-eabi-size   STM32F103C6\ REGISTERS\ LIBRARY.elf 
+arm-none-eabi-objdump -h -S  STM32F103C6\ REGISTERS\ LIBRARY.elf  > "STM32F103C6 REGISTERS LIBRARY.list"
+arm-none-eabi-objcopy  -O binary  STM32F103C6\ REGISTERS\ LIBRARY.elf  "STM32F103C6 REGISTERS LIBRARY.bin"
+   text	   data	    bss	    dec	    hex	filename
+   1500	      8	   1568	   3076	    c04	STM32F103C6 REGISTERS LIBRARY.elf
+Finished building: default.size.stdout
+ 
+Finished building: STM32F103C6 REGISTERS LIBRARY.bin
+Finished building: STM32F103C6 REGISTERS LIBRARY.list
+ 
+ 

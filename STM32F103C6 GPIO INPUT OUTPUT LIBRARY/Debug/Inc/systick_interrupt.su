@@ -1,0 +1,2 @@
+systick_interrupt.c:10:6:init_systick_interrupt	16	static
+systick_interrupt.c:27:6:SysTick_Handler	8	static

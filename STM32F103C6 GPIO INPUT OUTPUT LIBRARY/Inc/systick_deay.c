@@ -12,7 +12,7 @@ void init_systick_delay(){
 //CLOCK AHB BẮT BUỘC PHẢI LÀ 8MHZ
 //reset thanh ghi
 SysTick->CTRL =0;
-//cai dat gia tri đích cho bộ đếm
+////cai dat gia tri đích cho bộ đếm có 3byte tối đa
 SysTick->LOAD=0x00FFFFFF;
 //cài đặt giá trị cho thanh ghi đếm
 SysTick->VAL=0;

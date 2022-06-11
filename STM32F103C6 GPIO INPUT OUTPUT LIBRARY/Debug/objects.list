@@ -2,6 +2,7 @@
 "./Inc/interrupt_PA0.o"
 "./Inc/system_clock.o"
 "./Inc/systick_deay.o"
+"./Inc/systick_interrupt.o"
 "./Src/main.o"
 "./Src/syscalls.o"
 "./Src/sysmem.o"

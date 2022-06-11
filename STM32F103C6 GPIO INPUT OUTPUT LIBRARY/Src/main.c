@@ -19,9 +19,9 @@
 #include <stdint.h>
 #include "gpio.h"
 #include "system_clock.h"
-#include"interrupt_PA0.h"
-#include "systick_delay.h"
-
+//#include"interrupt_PA0.h"
+//#include "systick_delay.h"
+#include "systick_interrupt.h"
 //int interrupt_PA0 =0;
 int main(void)
 {
@@ -30,14 +30,13 @@ int main(void)
 //	init_GP(PA,0,IN,I_PP);
 //	W_GP(PC, 13, LOW);
 //	init_interrupt_PA0();
-	init_systick_delay();
+//	init_systick_delay();
+	init_systick_interrupt(1000);
 
 
 
 	while(1){
-	delayms(500);
-	toggle_GP(PC, 13);
-	delayms(500);
+
 	}
 }
 
