@@ -1,0 +1,7 @@
+"./Inc/gpio.o"
+"./Inc/interrupt_PA0.o"
+"./Inc/system_clock.o"
+"./Src/main.o"
+"./Src/syscalls.o"
+"./Src/sysmem.o"
+"./Startup/startup_stm32f103c6tx.o"
