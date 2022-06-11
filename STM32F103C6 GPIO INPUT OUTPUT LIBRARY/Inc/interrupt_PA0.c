@@ -6,7 +6,7 @@
  */
 #include"interrupt_PA0.h"
 #include "system_clock.h"
-extern int interrupt_PA0;
+//extern int interrupt_PA0;
 void init_interrupt_PA0(){
 	AFIO->EXTICR[0] =0;
 		EXTI->IMR |=1;
@@ -20,11 +20,11 @@ void EXTI0_IRQHandler(){
 	EXTI->PR |=1;
 	delay_ms(50);
 
-		if(interrupt_PA0){
-			interrupt_PA0=0;
-			}else{
-				interrupt_PA0=1;
-			}
+//		if(interrupt_PA0){
+//			interrupt_PA0=0;
+//			}else{
+//				interrupt_PA0=1;
+//			}
 
 
 }

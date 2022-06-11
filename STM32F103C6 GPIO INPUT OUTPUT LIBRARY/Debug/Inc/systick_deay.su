@@ -1,0 +1,3 @@
+systick_deay.c:11:6:init_systick_delay	4	static
+systick_deay.c:22:6:delayus	4	static
+systick_deay.c:28:6:delayms	16	static

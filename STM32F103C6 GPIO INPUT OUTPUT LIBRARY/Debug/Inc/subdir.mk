@@ -7,17 +7,20 @@
 C_SRCS += \
 ../Inc/gpio.c \
 ../Inc/interrupt_PA0.c \
-../Inc/system_clock.c 
+../Inc/system_clock.c \
+../Inc/systick_deay.c 
 
 OBJS += \
 ./Inc/gpio.o \
 ./Inc/interrupt_PA0.o \
-./Inc/system_clock.o 
+./Inc/system_clock.o \
+./Inc/systick_deay.o 
 
 C_DEPS += \
 ./Inc/gpio.d \
 ./Inc/interrupt_PA0.d \
-./Inc/system_clock.d 
+./Inc/system_clock.d \
+./Inc/systick_deay.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -27,7 +30,7 @@ Inc/%.o: ../Inc/%.c Inc/subdir.mk
 clean: clean-Inc
 
 clean-Inc:
-	-$(RM) ./Inc/gpio.d ./Inc/gpio.o ./Inc/interrupt_PA0.d ./Inc/interrupt_PA0.o ./Inc/system_clock.d ./Inc/system_clock.o
+	-$(RM) ./Inc/gpio.d ./Inc/gpio.o ./Inc/interrupt_PA0.d ./Inc/interrupt_PA0.o ./Inc/system_clock.d ./Inc/system_clock.o ./Inc/systick_deay.d ./Inc/systick_deay.o
 
 .PHONY: clean-Inc
 

@@ -1,0 +1,20 @@
+/*
+ * systick_deay.c
+ *
+ *  Created on: Jun 11, 2022
+ *      Author: ad
+ */
+
+
+#include "systick_delay.h"
+
+void delayus(){
+//reset thanh ghi
+SysTick->CTRL =0;
+//cai dat gia tri đích cho bộ đếm
+SysTick->LOAD=0x00FFFFFF;
+//cài đặt giá trị cho thanh ghi đếm
+SysTick->VAL=0;
+//bật thanh ghi và lấy clock từ AHB
+SysTick->CTRL=5;
+}
