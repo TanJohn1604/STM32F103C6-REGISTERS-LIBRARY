@@ -3,6 +3,7 @@
 "./Inc/system_clock.o"
 "./Inc/systick_deay.o"
 "./Inc/systick_interrupt.o"
+"./Inc/usart.o"
 "./Src/main.o"
 "./Src/syscalls.o"
 "./Src/sysmem.o"

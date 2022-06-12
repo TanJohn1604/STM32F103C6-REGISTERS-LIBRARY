@@ -34,34 +34,37 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := STM32F103C6 REGISTERS LIBRARY
+BUILD_ARTIFACT_NAME := STM32F103C6 LIBRARY
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-STM32F103C6\ REGISTERS\ LIBRARY.elf \
+STM32F103C6\ LIBRARY.elf \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-STM32F103C6\ REGISTERS\ LIBRARY.list \
+STM32F103C6\ LIBRARY.list \
+
+OBJCOPY_HEX += \
+STM32F103C6\ LIBRARY.hex \
 
 OBJCOPY_BIN += \
-STM32F103C6\ REGISTERS\ LIBRARY.bin \
+STM32F103C6\ LIBRARY.bin \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: STM32F103C6\ REGISTERS\ LIBRARY.elf secondary-outputs
+main-build: STM32F103C6\ LIBRARY.elf secondary-outputs
 
 # Tool invocations
-STM32F103C6\ REGISTERS\ LIBRARY.elf: $(OBJS) $(USER_OBJS) D:\Project\ STMf103c6\STM32F103C6\ GPIO\ INPUT\ OUTPUT\ LIBRARY\STM32F103C6TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "STM32F103C6 REGISTERS LIBRARY.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\Project STMf103c6\STM32F103C6 GPIO INPUT OUTPUT LIBRARY\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F103C6 REGISTERS LIBRARY.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+STM32F103C6\ LIBRARY.elf: $(OBJS) $(USER_OBJS) D:\Project\ STMf103c6\STM32F103C6\ LIBRARY\STM32F103C6TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "STM32F103C6 LIBRARY.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m3 -T"D:\Project STMf103c6\STM32F103C6 LIBRARY\STM32F103C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32F103C6 LIBRARY.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -70,22 +73,27 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-STM32F103C6\ REGISTERS\ LIBRARY.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "STM32F103C6 REGISTERS LIBRARY.list"
+STM32F103C6\ LIBRARY.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "STM32F103C6 LIBRARY.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-STM32F103C6\ REGISTERS\ LIBRARY.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "STM32F103C6 REGISTERS LIBRARY.bin"
+STM32F103C6\ LIBRARY.hex: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O ihex $(EXECUTABLES) "STM32F103C6 LIBRARY.hex"
+	@echo 'Finished building: $@'
+	@echo ' '
+
+STM32F103C6\ LIBRARY.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "STM32F103C6 LIBRARY.bin"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) STM32F103C6\ REGISTERS\ LIBRARY.bin STM32F103C6\ REGISTERS\ LIBRARY.elf STM32F103C6\ REGISTERS\ LIBRARY.list STM32F103C6\\ REGISTERS\\ LIBRARY.elf default.size.stdout
+	-$(RM) STM32F103C6\ LIBRARY.bin STM32F103C6\ LIBRARY.elf STM32F103C6\ LIBRARY.hex STM32F103C6\ LIBRARY.list STM32F103C6\\ LIBRARY.elf default.size.stdout
 	-@echo ' '
 
-secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_BIN)
+secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_HEX) $(OBJCOPY_BIN)
 
 fail-specified-linker-script-missing:
 	@echo 'Error: Cannot find the specified linker script. Check the linker settings in the build configuration.'

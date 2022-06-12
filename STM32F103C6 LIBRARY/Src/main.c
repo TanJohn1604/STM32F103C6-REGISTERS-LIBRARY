@@ -21,21 +21,39 @@
 #include "system_clock.h"
 //#include"interrupt_PA0.h"
 //#include "systick_delay.h"
-#include "systick_interrupt.h"
+//#include "systick_interrupt.h"
+#include "usart.h"
+
+
 //int interrupt_PA0 =0;
+
+
+
 int main(void)
 {
-    config();
+	//cấu hình clock ngoại 8Mhz, bộ chia của các bus cấu hình bằng 1
+	//bắt buộc phải config_clock();
+	//---------------------------------------xxx-------------------------------------------------------
+	config_clock();
+	//---------------------------------------xxx-------------------------------------------------------
 	init_GP(PC,13,OUT50,O_GP_PP);
 //	init_GP(PA,0,IN,I_PP);
-//	W_GP(PC, 13, LOW);
 //	init_interrupt_PA0();
 //	init_systick_delay();
-	init_systick_interrupt(1000);
+//	init_systick_interrupt(1000);
+	init_usart(1, 9600);
 
 
 
+	uint8_t a=0;
+	uint8_t s[5]="he ll";
 	while(1){
+
+	a=usart_get_char();
+	s[0]=a;
+	usart_send_string(s);
+	delay_ms(1000);
+
 
 	}
 }

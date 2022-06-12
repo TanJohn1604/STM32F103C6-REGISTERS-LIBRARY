@@ -8,7 +8,7 @@
 
 #include "system_clock.h"
 
-void config(void){
+void config_clock(void){
 	//bật clock ngoại 8Mhz
 	RCC->CR |= RCC_CR_HSEON;
 	//đợi cho clock ngoại bật xong

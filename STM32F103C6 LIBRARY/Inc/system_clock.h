@@ -11,7 +11,7 @@
 #include <stdint.h>
 #include <stm32f1xx.h>
 
-void config(void);
+void config_clock(void);
 void delay_us(uint16_t us );
 void delay_ms(uint16_t ms );
 

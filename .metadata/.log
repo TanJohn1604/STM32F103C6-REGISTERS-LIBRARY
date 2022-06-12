@@ -16,3 +16,71 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY org.eclipse.cdt.core 1 0 2022-06-11 23:01:30.362
 !MESSAGE Indexed 'STM32F103C6 LIBRARY' (8 sources, 66 headers) in 1,26 sec: 2.740 declarations; 4.541 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0,027%)
+!SESSION 2022-06-12 12:27:20.459 -----------------------------------------------
+eclipse.buildId=Version 1.8.0
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-06-12 12:27:35.988
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-06-12 12:27:36.120
+!MESSAGE Log4j initialized with config file D:\Project STMf103c6\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-06-12 12:27:52.723
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.core.resources 4 77 2022-06-12 14:36:13.959
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2022-06-12 14:36:13.959
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2022-06-12 14:36:13.959
+!MESSAGE D:\Project STMf103c6\STM32F103C6 LIBRARY overlaps the location of another project: 'STM32F103C6 LIBRARY'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2022-06-12 14:36:13.960
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2022-06-12 19:47:59.013
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2022-06-12 19:47:59.013
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2022-06-12 19:47:59.013
+!MESSAGE D:\Project STMf103c6\STM32F103C6 LIBRARY overlaps the location of another project: 'STM32F103C6 LIBRARY'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2022-06-12 19:47:59.013
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.cdt.core 1 0 2022-06-12 19:48:21.954
+!MESSAGE Indexed 'Reg_Uart' (4 sources, 62 headers) in 1,11 sec: 2.703 declarations; 4.581 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0,027%)
+
+!ENTRY org.eclipse.core.resources 4 77 2022-06-12 23:19:14.351
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2022-06-12 23:19:14.351
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2022-06-12 23:19:14.351
+!MESSAGE D:\Project STMf103c6\STM32F103C6 LIBRARY overlaps the location of another project: 'STM32F103C6 LIBRARY'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2022-06-12 23:19:14.351
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2022-06-12 23:19:18.814
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2022-06-12 23:19:18.814
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2022-06-12 23:19:18.814
+!MESSAGE D:\Project STMf103c6\STM32F103C6 LIBRARY overlaps the location of another project: 'STM32F103C6 LIBRARY'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2022-06-12 23:19:18.814
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2022-06-12 23:19:25.802
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2022-06-12 23:19:25.802
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2022-06-12 23:19:25.802
+!MESSAGE D:\Project STMf103c6\STM32F103C6 LIBRARY overlaps the location of another project: 'STM32F103C6 LIBRARY'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2022-06-12 23:19:25.802
+!MESSAGE Project is null
