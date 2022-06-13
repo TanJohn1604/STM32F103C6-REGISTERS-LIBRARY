@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete resource &apos;STM32F103C6 LIBRARY/Inc/usart_rx_advance.h&apos;" deleteContents="false" description="Delete resource &apos;STM32F103C6 LIBRARY/Inc/usart_rx_advance.h&apos;" element1="/STM32F103C6 LIBRARY/Inc/usart_rx_advance.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1655136743637"/>
-</session>

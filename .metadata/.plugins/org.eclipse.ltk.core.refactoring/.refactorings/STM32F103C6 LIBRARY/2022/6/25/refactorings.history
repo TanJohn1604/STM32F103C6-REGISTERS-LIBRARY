@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;STM32F103C6 LIBRARY/Inc/systick_deay.c&apos; to &apos;systick_delay.c&apos;" description="Rename resource &apos;systick_deay.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Inc/systick_deay.c" name="systick_delay.c" stamp="1655135663652" updateReferences="true"/>
-</session>

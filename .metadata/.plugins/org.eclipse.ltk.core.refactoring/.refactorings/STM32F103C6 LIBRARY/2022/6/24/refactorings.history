@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;STM32F103C6 LIBRARY/Inc/init_usart.h&apos; to &apos;usart.h&apos;" description="Rename resource &apos;init_usart.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Inc/init_usart.h" name="usart.h" stamp="1655047183436" updateReferences="true"/>
-</session>
