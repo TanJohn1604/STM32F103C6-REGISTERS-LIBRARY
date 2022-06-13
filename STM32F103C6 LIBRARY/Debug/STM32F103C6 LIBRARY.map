@@ -241,7 +241,7 @@ Discarded input sections
  .text          0x0000000000000000        0x0 ./Inc/usart_rx_interrupt.o
  .data          0x0000000000000000        0x0 ./Inc/usart_rx_interrupt.o
  .bss           0x0000000000000000        0x0 ./Inc/usart_rx_interrupt.o
- .text.usart_isr
+ .text.usart_get_string_isr
                 0x0000000000000000       0x62 ./Inc/usart_rx_interrupt.o
  .debug_macro   0x0000000000000000      0xaa2 ./Inc/usart_rx_interrupt.o
  .debug_macro   0x0000000000000000       0x2e ./Inc/usart_rx_interrupt.o
@@ -1013,7 +1013,7 @@ LOAD c:/st/stm32cubeide_1.8.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
  .debug_line    0x0000000000001c93      0x4ea ./Src/main.o
  .debug_line    0x000000000000217d       0x84 ./Startup/startup_stm32f103c6tx.o
 
-.debug_str      0x0000000000000000    0x53958
+.debug_str      0x0000000000000000    0x53963
  .debug_str     0x0000000000000000     0x2ee0 ./Inc/gpio.o
                                        0x2f05 (size before relaxing)
  .debug_str     0x0000000000002ee0    0x507e1 ./Inc/interrupt_PA0.o
@@ -1024,11 +1024,11 @@ LOAD c:/st/stm32cubeide_1.8.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
                                       0x535de (size before relaxing)
  .debug_str     0x0000000000053802       0xa2 ./Inc/usart.o
                                       0x53666 (size before relaxing)
- .debug_str     0x00000000000538a4       0x70 ./Inc/usart_rx_interrupt.o
-                                      0x537e5 (size before relaxing)
- .debug_str     0x0000000000053914       0x13 ./Src/main.o
+ .debug_str     0x00000000000538a4       0x7b ./Inc/usart_rx_interrupt.o
+                                      0x537f0 (size before relaxing)
+ .debug_str     0x000000000005391f       0x13 ./Src/main.o
                                       0x535b5 (size before relaxing)
- .debug_str     0x0000000000053927       0x31 ./Startup/startup_stm32f103c6tx.o
+ .debug_str     0x0000000000053932       0x31 ./Startup/startup_stm32f103c6tx.o
                                          0x60 (size before relaxing)
 
 .comment        0x0000000000000000       0x53

@@ -1,4 +1,4 @@
-18:05:30 **** Incremental Build of configuration Debug for project STM32F103C6 LIBRARY ****
+18:08:29 **** Incremental Build of configuration Debug for project STM32F103C6 LIBRARY ****
 make -j8 all 
 arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"D:/Project STMf103c6/STM32F103C6 LIBRARY/Drivers/CMSIS/Core/Include" -I"D:/Project STMf103c6/STM32F103C6 LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx" -I"D:/Project STMf103c6/STM32F103C6 LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
 arm-none-eabi-gcc "../Inc/usart_rx_interrupt.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DSTM32 -DSTM32F1 -DSTM32F103C6Tx -c -I../Inc -I"D:/Project STMf103c6/STM32F103C6 LIBRARY/Drivers/CMSIS/Core/Include" -I"D:/Project STMf103c6/STM32F103C6 LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx" -I"D:/Project STMf103c6/STM32F103C6 LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Inc/usart_rx_interrupt.d" -MT"Inc/usart_rx_interrupt.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Inc/usart_rx_interrupt.o"
@@ -15,10 +15,10 @@ Finished building: default.size.stdout
  
 Finished building: STM32F103C6 LIBRARY.hex
 Finished building: STM32F103C6 LIBRARY.bin
- 
 Finished building: STM32F103C6 LIBRARY.list
  
  
+ 
 
-18:05:31 Build Finished. 0 errors, 0 warnings. (took 965ms)
+18:08:30 Build Finished. 0 errors, 0 warnings. (took 1s.1ms)
 

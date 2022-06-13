@@ -1,3 +1,3 @@
 core_cm3.h:1511:22:__NVIC_EnableIRQ	16	static
 usart_rx_interrupt.c:9:6:init_usart_rx_interrupt	16	static,ignoring_inline_asm
-usart_rx_interrupt.c:33:6:usart_isr	32	static
+usart_rx_interrupt.c:33:6:usart_get_string_isr	32	static
