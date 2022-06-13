@@ -8,7 +8,7 @@
 
 void init_usart_rx_interrupt(uint8_t usart_x){
 //--------------------------------------------------------
-// phải cấu hình init_usart trước
+// usart : 8 bit data, 1 stop bit, none parity
 // clock phải được cấu hình 8Mhz, thông qua config_clock()
 //--------------------------------------------------------
 // USART2 -> PA2 (Tx) and PA3(Rx)
