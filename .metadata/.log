@@ -84,3 +84,38 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.common.projectcreation 4 0 2022-06-12 23:19:25.802
 !MESSAGE Project is null
+!SESSION 2022-06-13 17:17:35.377 -----------------------------------------------
+eclipse.buildId=Version 1.8.0
+java.version=11.0.11
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2022-06-13 17:17:48.738
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2022-06-13 17:17:48.828
+!MESSAGE Log4j initialized with config file D:\Project STMf103c6\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2022-06-13 17:18:03.139
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY org.eclipse.core.resources 4 77 2022-06-13 17:44:12.450
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2022-06-13 17:44:12.450
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2022-06-13 17:44:12.450
+!MESSAGE D:\Project STMf103c6\STM32F103C6 LIBRARY overlaps the location of another project: 'STM32F103C6 LIBRARY'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2022-06-13 17:44:12.450
+!MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2022-06-13 18:06:24.243
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2022-06-13 18:06:24.243
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2022-06-13 18:06:24.243
+!MESSAGE D:\Project STMf103c6\STM32F103C6 LIBRARY overlaps the location of another project: 'STM32F103C6 LIBRARY'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2022-06-13 18:06:24.243
+!MESSAGE Project is null

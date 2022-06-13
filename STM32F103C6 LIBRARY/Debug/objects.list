@@ -4,6 +4,7 @@
 "./Inc/systick_deay.o"
 "./Inc/systick_interrupt.o"
 "./Inc/usart.o"
+"./Inc/usart_rx_interrupt.o"
 "./Src/main.o"
 "./Src/syscalls.o"
 "./Src/sysmem.o"

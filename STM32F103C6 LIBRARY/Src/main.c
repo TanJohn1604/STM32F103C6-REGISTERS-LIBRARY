@@ -23,12 +23,14 @@
 //#include "systick_delay.h"
 //#include "systick_interrupt.h"
 #include "usart.h"
-
+#include "usart_rx_interrupt.h"
 
 //int interrupt_PA0 =0;
 
-
-
+void UART_ISR(uint8_t * signal, uint8_t * counter, uint8_t str[]);
+uint8_t signal=0;
+uint8_t counter=0;
+uint8_t str[250];
 int main(void)
 {
 	//cấu hình clock ngoại 8Mhz, bộ chia của các bus cấu hình bằng 1
@@ -42,19 +44,16 @@ int main(void)
 //	init_systick_delay();
 //	init_systick_interrupt(1000);
 	init_usart(1, 9600);
+	init_usart_rx_interrupt(1);
 
 
 
-	uint8_t a=0;
-	uint8_t s[5]="he ll";
 	while(1){
-
-	a=usart_get_char();
-	s[0]=a;
-	usart_send_string(s);
-	delay_ms(1000);
-
-
+		if(signal==1){
+			usart_send_string(str);
+			signal=0;
+		}
 	}
 }
+
 
