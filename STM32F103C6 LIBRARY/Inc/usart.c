@@ -11,6 +11,7 @@
 void init_usart(uint8_t usart_x,uint16_t baudrate){
 //--------------------------------------------------------
 // usart : 8 bit data, 1 stop bit, none parity
+// chỉ bật 1 usart trong 1 chương trình, nếu muốn bật nhiêu thì phải sữa lại hàm gửi và đọc data
 // clock phải được cấu hình 8Mhz, thông qua config_clock()
 //--------------------------------------------------------
 // USART2 -> PA2 (Tx) and PA3(Rx)
