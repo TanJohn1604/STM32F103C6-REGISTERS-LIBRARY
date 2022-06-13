@@ -1,4 +1,4 @@
-Inc/systick_deay.o: ../Inc/systick_deay.c ../Inc/systick_delay.h \
+Inc/systick_delay.o: ../Inc/systick_delay.c ../Inc/systick_delay.h \
  D:/Project\ STMf103c6/STM32F103C6\ LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h \
  D:/Project\ STMf103c6/STM32F103C6\ LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103x6.h \
  D:/Project\ STMf103c6/STM32F103C6\ LIBRARY/Drivers/CMSIS/Core/Include/core_cm3.h \

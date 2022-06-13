@@ -21,16 +21,15 @@
 #include "system_clock.h"
 //#include"interrupt_PA0.h"
 //#include "systick_delay.h"
-//#include "systick_interrupt.h"
-#include "usart.h"
+#include "systick_interrupt.h"
+//#include "usart.h"
 #include "usart_rx_interrupt.h"
 
 //int interrupt_PA0 =0;
 
-void UART_ISR(uint8_t * signal, uint8_t * counter, uint8_t str[]);
-uint8_t signal=0;
-uint8_t counter=0;
-uint8_t str[250];
+uint16_t usart_manager[]={0,0,1,'z',5000};
+uint8_t usart_data[255]="";
+
 int main(void)
 {
 	//cấu hình clock ngoại 8Mhz, bộ chia của các bus cấu hình bằng 1
@@ -39,6 +38,7 @@ int main(void)
 	config_clock();
 	//---------------------------------------xxx-------------------------------------------------------
 	init_GP(PC,13,OUT50,O_GP_PP);
+	W_GP(PC, 13,HIGH);
 //	init_GP(PA,0,IN,I_PP);
 //	init_interrupt_PA0();
 //	init_systick_delay();
@@ -49,11 +49,20 @@ int main(void)
 
 
 	while(1){
-		if(signal==1){
-			usart_send_string(str);
-			signal=0;
+
+		if(usart_manager[1]==1){
+
+			usart_send_string(usart_data);
+			usart_manager[1]=0;
 		}
+
 	}
 }
 
 
+void USART1_IRQHandler(){
+	 usart_get_string_isr(usart_manager,usart_data);
+}
+void SysTick_Handler(){
+	systick_interrupt_time_usart(usart_manager);
+}

@@ -1,7 +1,7 @@
 "./Inc/gpio.o"
 "./Inc/interrupt_PA0.o"
 "./Inc/system_clock.o"
-"./Inc/systick_deay.o"
+"./Inc/systick_delay.o"
 "./Inc/systick_interrupt.o"
 "./Inc/usart.o"
 "./Inc/usart_rx_interrupt.o"

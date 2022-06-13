@@ -8,7 +8,7 @@ C_SRCS += \
 ../Inc/gpio.c \
 ../Inc/interrupt_PA0.c \
 ../Inc/system_clock.c \
-../Inc/systick_deay.c \
+../Inc/systick_delay.c \
 ../Inc/systick_interrupt.c \
 ../Inc/usart.c \
 ../Inc/usart_rx_interrupt.c 
@@ -17,7 +17,7 @@ OBJS += \
 ./Inc/gpio.o \
 ./Inc/interrupt_PA0.o \
 ./Inc/system_clock.o \
-./Inc/systick_deay.o \
+./Inc/systick_delay.o \
 ./Inc/systick_interrupt.o \
 ./Inc/usart.o \
 ./Inc/usart_rx_interrupt.o 
@@ -26,7 +26,7 @@ C_DEPS += \
 ./Inc/gpio.d \
 ./Inc/interrupt_PA0.d \
 ./Inc/system_clock.d \
-./Inc/systick_deay.d \
+./Inc/systick_delay.d \
 ./Inc/systick_interrupt.d \
 ./Inc/usart.d \
 ./Inc/usart_rx_interrupt.d 
@@ -39,7 +39,7 @@ Inc/%.o: ../Inc/%.c Inc/subdir.mk
 clean: clean-Inc
 
 clean-Inc:
-	-$(RM) ./Inc/gpio.d ./Inc/gpio.o ./Inc/interrupt_PA0.d ./Inc/interrupt_PA0.o ./Inc/system_clock.d ./Inc/system_clock.o ./Inc/systick_deay.d ./Inc/systick_deay.o ./Inc/systick_interrupt.d ./Inc/systick_interrupt.o ./Inc/usart.d ./Inc/usart.o ./Inc/usart_rx_interrupt.d ./Inc/usart_rx_interrupt.o
+	-$(RM) ./Inc/gpio.d ./Inc/gpio.o ./Inc/interrupt_PA0.d ./Inc/interrupt_PA0.o ./Inc/system_clock.d ./Inc/system_clock.o ./Inc/systick_delay.d ./Inc/systick_delay.o ./Inc/systick_interrupt.d ./Inc/systick_interrupt.o ./Inc/usart.d ./Inc/usart.o ./Inc/usart_rx_interrupt.d ./Inc/usart_rx_interrupt.o
 
 .PHONY: clean-Inc
 

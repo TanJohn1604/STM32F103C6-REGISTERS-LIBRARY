@@ -119,3 +119,13 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.common.projectcreation 4 0 2022-06-13 18:06:24.243
 !MESSAGE Project is null
+
+!ENTRY org.eclipse.core.resources 4 77 2022-06-13 22:49:33.895
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2022-06-13 22:49:33.895
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2022-06-13 22:49:33.895
+!MESSAGE D:\Project STMf103c6\STM32F103C6 LIBRARY overlaps the location of another project: 'STM32F103C6 LIBRARY'
+
+!ENTRY com.st.stm32cube.common.projectcreation 4 0 2022-06-13 22:49:33.895
+!MESSAGE Project is null

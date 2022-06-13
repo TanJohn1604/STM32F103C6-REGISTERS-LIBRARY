@@ -5,6 +5,7 @@
  *      Author: ad
  */
 #include"usart_rx_interrupt.h"
+#include "systick_interrupt.h"
 
 void init_usart_rx_interrupt(uint8_t usart_x){
 //--------------------------------------------------------
@@ -30,24 +31,58 @@ void init_usart_rx_interrupt(uint8_t usart_x){
 	}
 
 }
-void usart_get_string_isr(uint8_t * signal, uint8_t * counter, uint8_t str[],uint8_t terminator_char)
+/* uint16_t usart_manager[]
+ * 0 - count_char
+ * 1 - signal
+ * 2 - mode ( 1 : systick interrupt time ; 0 : char terminator )
+ * 3 - char terminator
+ * 4 - time
+ * 5 - temp cnt time
+ */
+void usart_get_string_isr(uint16_t usart_manager[], uint8_t usart_data[])
 {
 //đặt trong hàm ngắt của usart tương ứng
 //ex : void USART1_IRQHandler()
 
-str[*counter] = usart_get_char();
-if(str[*counter] == detect_char)
-{
-	str[*counter]='\0';
-	*counter = 0;
-	*signal = 1;
+usart_data[usart_manager[0]] = usart_get_char();
+if(usart_manager[2]==0){
+	if(usart_data[usart_manager[0]] == usart_manager[3])
+	{
+		usart_data[usart_manager[0]]='\0';
+		usart_manager[0] = 0;
+		usart_manager[1] = 1;
+
+	}
+	else
+	{
+		usart_manager[0]++;
+
+	}
+}
+else{
+	usart_manager[0]++;
+	usart_manager[5]=usart_manager[4];
+
+	__disable_irq();
+	SysTick->CTRL = 0;
+	//cai dat gia tri đích cho bộ đếm có 3byte tối đa
+	SysTick->LOAD= 8000-1;
+	//cài đặt giá trị cho thanh ghi đếm
+	SysTick->VAL=0;
+	//lấy clock từ AHB
+	SysTick->CTRL |= SysTick_CTRL_CLKSOURCE_Msk;
+	//BẬT NGẮT SYSTICK
+	SysTick->CTRL |= SysTick_CTRL_TICKINT_Msk;
+	//BẬT THANH GHI
+	SysTick->CTRL |= SysTick_CTRL_ENABLE_Msk;
+	__enable_irq();
+}
 
 }
-else
-{
-	*counter = *counter +1;
 
-}
-}
 
+
+//void SysTick_Handler(){
+//
+//}
 

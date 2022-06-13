@@ -11,6 +11,6 @@
 #include "usart.h"
 
 void init_usart_rx_interrupt(uint8_t usart_x);
-void usart_get_string_isr(uint8_t * signal, uint8_t * counter, uint8_t str[],uint8_t terminator_char);
+void usart_get_string_isr(uint16_t usart_manager[], uint8_t usart_data[]);
 
 #endif /* USART_RX_INTERRUPT_H_ */

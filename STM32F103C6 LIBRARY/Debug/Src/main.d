@@ -6,7 +6,7 @@ Src/main.o: ../Src/main.c ../Inc/gpio.h ../Inc/system_clock.h \
  D:/Project\ STMf103c6/STM32F103C6\ LIBRARY/Drivers/CMSIS/Core/Include/cmsis_compiler.h \
  D:/Project\ STMf103c6/STM32F103C6\ LIBRARY/Drivers/CMSIS/Core/Include/cmsis_gcc.h \
  D:/Project\ STMf103c6/STM32F103C6\ LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h \
- ../Inc/usart.h ../Inc/usart_rx_interrupt.h ../Inc/usart.h
+ ../Inc/systick_interrupt.h ../Inc/usart_rx_interrupt.h ../Inc/usart.h
 
 ../Inc/gpio.h:
 
@@ -26,7 +26,7 @@ D:/Project\ STMf103c6/STM32F103C6\ LIBRARY/Drivers/CMSIS/Core/Include/cmsis_gcc.
 
 D:/Project\ STMf103c6/STM32F103C6\ LIBRARY/Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h:
 
-../Inc/usart.h:
+../Inc/systick_interrupt.h:
 
 ../Inc/usart_rx_interrupt.h:
 
