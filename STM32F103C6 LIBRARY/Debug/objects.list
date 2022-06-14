@@ -1,5 +1,6 @@
 "./Inc/gpio.o"
 "./Inc/interrupt_PA0.o"
+"./Inc/string_func.o"
 "./Inc/system_clock.o"
 "./Inc/systick_delay.o"
 "./Inc/systick_interrupt.o"

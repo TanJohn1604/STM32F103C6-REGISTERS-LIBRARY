@@ -1,0 +1,4 @@
+string_func.c:10:5:string_len	24	static
+string_func.c:18:5:find_str	40	static
+string_func.c:51:6:int2char	64	static
+string_func.c:72:5:char2int	40	static
