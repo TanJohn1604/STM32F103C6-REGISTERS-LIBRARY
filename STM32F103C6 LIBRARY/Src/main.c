@@ -64,8 +64,7 @@ int main(void)
 			usart_send_string(1, usart2_data);
 			usart2_manager[1]=0;
 		}
-//		usart_send_string(2, bb);
-//		delay_ms(1000);
+
 
 
 	}
