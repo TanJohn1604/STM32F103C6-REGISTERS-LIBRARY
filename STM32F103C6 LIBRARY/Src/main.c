@@ -21,14 +21,17 @@
 #include "system_clock.h"
 //#include"interrupt_PA0.h"
 //#include "systick_delay.h"
-#include "systick_interrupt.h"
-//#include "usart.h"
+//#include "systick_interrupt.h"
+#include "usart.h"
 #include "usart_rx_interrupt.h"
 
 //int interrupt_PA0 =0;
 
-uint16_t usart_manager[]={0,0,1,'z',5000};
-uint8_t usart_data[255]="";
+uint16_t usart1_manager[]={0,0,0,'z',5000,0,1};
+uint16_t usart2_manager[]={0,0,0,'z',5000,0,2};
+
+uint8_t usart1_data[255]="";
+uint8_t usart2_data[255]="";
 
 int main(void)
 {
@@ -46,23 +49,35 @@ int main(void)
 	init_usart(1, 9600);
 	init_usart_rx_interrupt(1);
 
+	init_usart(2, 9600);
+	init_usart_rx_interrupt(2);
+
 
 
 	while(1){
 
-		if(usart_manager[1]==1){
-
-			usart_send_string(usart_data);
-			usart_manager[1]=0;
+		if(usart1_manager[1]==1){
+			usart_send_string(2, usart1_data);
+			usart1_manager[1]=0;
 		}
+		if(usart2_manager[1]==1){
+			usart_send_string(1, usart2_data);
+			usart2_manager[1]=0;
+		}
+//		usart_send_string(2, bb);
+//		delay_ms(1000);
+
 
 	}
 }
 
 
 void USART1_IRQHandler(){
-	 usart_get_string_isr(usart_manager,usart_data);
+	 usart_get_string_isr(usart1_manager,usart1_data);
 }
-void SysTick_Handler(){
-	systick_interrupt_time_usart(usart_manager);
+void USART2_IRQHandler(){
+	 usart_get_string_isr(usart2_manager,usart2_data);
 }
+//void SysTick_Handler(){
+//	systick_interrupt_time_usart(usart_manager);
+//}

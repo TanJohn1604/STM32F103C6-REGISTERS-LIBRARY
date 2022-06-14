@@ -13,7 +13,7 @@
 //--------------------------------------------------------
 void init_usart(uint8_t usartx,uint16_t baudrate);
 uint32_t usartdiv_baudrate(uint32_t baudrate);
-void usart_send_char(uint8_t a);
-uint8_t usart_get_char();
-void usart_send_string(uint8_t *string);
+void usart_send_char(uint8_t usart_x,uint8_t a);
+uint8_t usart_get_char(uint8_t usart_x);
+void usart_send_string(uint8_t usart_x,uint8_t *string);
 #endif /* USART_H_ */

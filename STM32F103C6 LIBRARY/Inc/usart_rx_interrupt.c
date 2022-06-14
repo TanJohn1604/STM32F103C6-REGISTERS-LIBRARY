@@ -38,13 +38,14 @@ void init_usart_rx_interrupt(uint8_t usart_x){
  * 3 - char terminator
  * 4 - time
  * 5 - temp cnt time
+ * 6 - get data from usart_x
  */
 void usart_get_string_isr(uint16_t usart_manager[], uint8_t usart_data[])
 {
 //đặt trong hàm ngắt của usart tương ứng
 //ex : void USART1_IRQHandler()
 
-usart_data[usart_manager[0]] = usart_get_char();
+usart_data[usart_manager[0]] = usart_get_char((uint8_t)usart_manager[6]);
 if(usart_manager[2]==0){
 	if(usart_data[usart_manager[0]] == usart_manager[3])
 	{

@@ -1,5 +1,5 @@
 usart.c:11:6:init_usart	24	static
 usart.c:59:10:usartdiv_baudrate	56	static
 usart.c:84:6:usart_send_char	16	static
-usart.c:95:9:usart_get_char	16	static
-usart.c:108:6:usart_send_string	16	static
+usart.c:96:9:usart_get_char	24	static
+usart.c:109:6:usart_send_string	16	static

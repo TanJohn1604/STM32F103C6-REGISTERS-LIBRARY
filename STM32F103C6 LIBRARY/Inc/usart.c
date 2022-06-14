@@ -81,35 +81,36 @@ final += dec;
 return final;
 }
 
-void usart_send_char(uint8_t a){
-	if(RCC->APB2ENR & RCC_APB2ENR_USART1EN){
+void usart_send_char(uint8_t usart_x,uint8_t a){
+	if((RCC->APB2ENR & RCC_APB2ENR_USART1EN) && usart_x==1){
 		while( !(USART1->SR & USART_SR_TC ));
 			USART1->DR=a;
 	}
-	else{
+	else if((RCC->APB1ENR & RCC_APB1ENR_USART2EN) && usart_x==2){
 		while( !(USART2->SR & USART_SR_TC ));
 			USART2->DR=a;
 	}
+
 }
 
-uint8_t usart_get_char(){
+uint8_t usart_get_char(uint8_t usart_x){
 	uint8_t a;
-	if(RCC->APB2ENR & RCC_APB2ENR_USART1EN){
+	if((RCC->APB2ENR & RCC_APB2ENR_USART1EN) && (usart_x==1)){
 			while( !(USART1->SR & USART_SR_RXNE ));
 			a=USART1->DR;
 		}
-		else{
+	else if((RCC->APB1ENR & RCC_APB1ENR_USART2EN) && (usart_x==2)){
 			while( !(USART2->SR & USART_SR_RXNE ));
 			a=USART2->DR;
 		}
 	return a;
 }
 
-void usart_send_string(uint8_t *string){
+void usart_send_string(uint8_t usart_x,uint8_t *string){
 
 
 	while(*string){
-		usart_send_char(*string++);
+		usart_send_char(usart_x,*string++);
 
 	}
 
