@@ -1,0 +1,48 @@
+
+-config_clock() phải luôn được sử dụng để cấu hình 
+	clock HSE 8Mhz
+	bộ chia các apb1 apb2 bằng 1
+	đã cấu hình 1 timer để sử dụng delay_ms()
+
+-khi sử dụng các hàm ngắt phải khai báo hàm handler ngắt vào hàm main
+-khi sử dụng usart ngắt phải khai báo lần lượt
+	init_usart(1, 9600);
+	init_usart_rx_interrupt(1);
++ lưu ý hàm usart_get_string_isr() phải đặt trong hàm void USART1_IRQHandler() (trong main.c)
+
+-với chức năng đọc usart với ngắt có 2 mode
+	mode kiểm tra kí tự cuối terminator char
+	mode đợi thời gian, sau xxx ms không nhận được kí tự nào, thì sẽ bật cờ signal lên.
+	để tránh lỗi các mảng dữ liệu dùng để lưu data sẽ được đặt global đồng thời phải init nó với chuỗi rỗng
+để chứa toàn kí tự '\0', để tránh lỗi xảy ra khi dùng mode thời gian
+
+-----------------------------------------------------------------------------------------------------------
+với chức năng usart ngắt đọc dữ liệu terminator
+
+phải khai báo 
+uint16_t usart_manager[]
+/* 
+ * 0 - count_char
+ * 1 - signal
+ * 2 - mode ( 1 : systick interrupt time ; 0 : char terminator )
+ * 3 - char terminator
+ * 4 - time
+ * 5 - temp cnt time
+ * 6 - get data from usart_x
+ */
+ uint8_t usart1_data[255]="";
+ 
+ trong main phải 
+ 	config_clock();
+ 	init_usart(1, 9600);
+	init_usart_rx_interrupt(1);
+ 	hàm usart_get_string_isr() phải được khai báo trong USART1_IRQHandler()
+ 	
+nếu mode là systick interrupt time
+ 	hàm systick_interrupt_time_usart(usart_manager) phải được đặt trong void SysTick_Handler()
+
+ 
+ 
+ 
+ 
+ 

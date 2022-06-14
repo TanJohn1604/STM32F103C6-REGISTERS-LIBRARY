@@ -83,7 +83,13 @@ else{
 
 
 
+//void USART1_IRQHandler(){
+//	 usart_get_string_isr(usart1_manager,usart1_data);
+//}
+//void USART2_IRQHandler(){
+//	 usart_get_string_isr(usart2_manager,usart2_data);
+//}
 //void SysTick_Handler(){
-//
+//	systick_interrupt_time_usart(usart_manager);
 //}
 
