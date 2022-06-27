@@ -95,4 +95,12 @@ void toggle_GP(unsigned short port, unsigned short pin)
 }
 
 
+void Digital_Input(unsigned short PORT,unsigned short PIN)
+{
+	init_GP(PORT, PIN,IN,I_PP);
+}
 
+void Digital_Output(unsigned short PORT,unsigned short PIN)
+{
+	init_GP(PORT, PIN,OUT50,O_GP_PP);
+}

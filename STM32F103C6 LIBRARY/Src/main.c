@@ -22,16 +22,16 @@
 //#include"interrupt_PA0.h"
 //#include "systick_delay.h"
 //#include "systick_interrupt.h"
-#include "usart.h"
-#include "usart_rx_interrupt.h"
-
+//#include "usart.h"
+//#include "usart_rx_interrupt.h"
+#include "lcd_1602.h"
 //int interrupt_PA0 =0;
 
-uint16_t usart1_manager[]={0,0,0,'z',5000,0,1};
-uint16_t usart2_manager[]={0,0,0,'z',5000,0,2};
-
-uint8_t usart1_data[255]="";
-uint8_t usart2_data[255]="";
+//uint16_t usart1_manager[]={0,0,0,'z',5000,0,1};
+//uint16_t usart2_manager[]={0,0,0,'z',5000,0,2};
+//
+//uint8_t usart1_data[255]="";
+//uint8_t usart2_data[255]="";
 
 int main(void)
 {
@@ -46,24 +46,14 @@ int main(void)
 //	init_interrupt_PA0();
 //	init_systick_delay();
 //	init_systick_interrupt(1000);
-	init_usart(1, 9600);
-	init_usart_rx_interrupt(1);
+//	init_usart(1, 9600);
+//	init_usart_rx_interrupt(1);
+	lcd_init();
 
-	init_usart(2, 9600);
-	init_usart_rx_interrupt(2);
-
-
-
+	lcd_msg(1, 0, "tan dep trai");
 	while(1){
 
-		if(usart1_manager[1]==1){
-			usart_send_string(2, usart1_data);
-			usart1_manager[1]=0;
-		}
-		if(usart2_manager[1]==1){
-			usart_send_string(1, usart2_data);
-			usart2_manager[1]=0;
-		}
+
 
 
 
@@ -71,12 +61,7 @@ int main(void)
 }
 
 
-void USART1_IRQHandler(){
-	 usart_get_string_isr(usart1_manager,usart1_data);
-}
-void USART2_IRQHandler(){
-	 usart_get_string_isr(usart2_manager,usart2_data);
-}
+
 //void SysTick_Handler(){
 //	systick_interrupt_time_usart(usart_manager);
 //}

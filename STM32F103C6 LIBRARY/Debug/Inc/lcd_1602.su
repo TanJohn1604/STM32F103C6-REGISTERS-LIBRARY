@@ -1,0 +1,9 @@
+lcd_1602.c:25:6:pin_output	24	static
+lcd_1602.c:34:6:lcd_rs	16	static
+lcd_1602.c:38:6:lcd_rw	16	static
+lcd_1602.c:42:6:lcd_e	16	static
+lcd_1602.c:47:6:lcd_data	16	static
+lcd_1602.c:60:6:lcd_cmd	16	static
+lcd_1602.c:74:6:lcd_init	8	static
+lcd_1602.c:87:6:lcd_send	24	static
+lcd_1602.c:99:6:lcd_msg	24	static

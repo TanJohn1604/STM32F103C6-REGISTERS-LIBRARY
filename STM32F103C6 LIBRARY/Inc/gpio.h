@@ -49,5 +49,6 @@ void W_GP(unsigned short port, unsigned short pin, unsigned short state);
 
 void toggle_GP(unsigned short port, unsigned short pin);
 
-
+void Digital_Input(unsigned short PORT,unsigned short PIN);
+void Digital_Output(unsigned short PORT,unsigned short PIN);
 #endif /* GPIO_H_ */

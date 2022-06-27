@@ -2,3 +2,5 @@ gpio.c:9:6:init_GP	24	static
 gpio.c:42:5:R_GP	32	static
 gpio.c:64:6:W_GP	24	static
 gpio.c:85:6:toggle_GP	16	static
+gpio.c:98:6:Digital_Input	16	static
+gpio.c:103:6:Digital_Output	16	static
