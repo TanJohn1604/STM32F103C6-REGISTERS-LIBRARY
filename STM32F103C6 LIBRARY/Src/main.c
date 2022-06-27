@@ -50,9 +50,13 @@ int main(void)
 //	init_usart_rx_interrupt(1);
 	lcd_init();
 
-	lcd_msg(1, 0, "tan dep trai");
 	while(1){
 
+		for(int i=0;i<5;i++){
+			delay_ms(200);
+
+			lcd_msg(1, i, "tan dep trai");
+		}
 
 
 
