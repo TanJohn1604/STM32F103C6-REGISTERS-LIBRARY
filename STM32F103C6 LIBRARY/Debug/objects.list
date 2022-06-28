@@ -1,6 +1,6 @@
 "./Inc/gpio.o"
 "./Inc/interrupt_PA0.o"
-"./Inc/lcd_1602.o"
+"./Inc/lcd_1602_mode8.o"
 "./Inc/string_func.o"
 "./Inc/system_clock.o"
 "./Inc/systick_delay.o"

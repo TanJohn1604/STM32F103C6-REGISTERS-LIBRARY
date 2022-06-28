@@ -5,8 +5,8 @@
  *      Author: ad
  */
 
-#ifndef LCD_1602_H_
-#define LCD_1602_H_
+#ifndef LCD_1602_MODE8_H_
+#define LCD_1602_MODE8_H_
 
 #include "gpio.h"
 #include "system_clock.h"
@@ -22,5 +22,5 @@ void lcd_init(void);
 void lcd_send( char str[]);
 void lcd_msg(unsigned char line_1_2, unsigned char pos_0_16, char msg[]);
 
-#endif /* LCD_1602_H_ */
+#endif /* LCD_1602_MODE8_H_ */
 

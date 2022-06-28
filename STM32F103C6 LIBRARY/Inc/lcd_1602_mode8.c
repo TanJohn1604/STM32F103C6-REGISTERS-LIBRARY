@@ -5,7 +5,7 @@
  *      Author: ad
  */
 
-#include "lcd_1602.h"
+#include "lcd_1602_mode8.h"
 
 /*
 Pin setup

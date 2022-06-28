@@ -16,6 +16,7 @@
  ******************************************************************************
  */
 
+#include "lcd_1602_mode8.h"
 #include <stdint.h>
 #include "gpio.h"
 #include "system_clock.h"
@@ -24,7 +25,6 @@
 //#include "systick_interrupt.h"
 //#include "usart.h"
 //#include "usart_rx_interrupt.h"
-#include "lcd_1602.h"
 //int interrupt_PA0 =0;
 
 //uint16_t usart1_manager[]={0,0,0,'z',5000,0,1};
