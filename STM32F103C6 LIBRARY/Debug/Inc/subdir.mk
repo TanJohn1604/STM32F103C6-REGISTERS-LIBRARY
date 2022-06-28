@@ -6,6 +6,7 @@
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
 ../Inc/gpio.c \
+../Inc/i2c.c \
 ../Inc/interrupt_PA0.c \
 ../Inc/lcd_1602_mode8.c \
 ../Inc/string_func.c \
@@ -17,6 +18,7 @@ C_SRCS += \
 
 OBJS += \
 ./Inc/gpio.o \
+./Inc/i2c.o \
 ./Inc/interrupt_PA0.o \
 ./Inc/lcd_1602_mode8.o \
 ./Inc/string_func.o \
@@ -28,6 +30,7 @@ OBJS += \
 
 C_DEPS += \
 ./Inc/gpio.d \
+./Inc/i2c.d \
 ./Inc/interrupt_PA0.d \
 ./Inc/lcd_1602_mode8.d \
 ./Inc/string_func.d \
@@ -45,7 +48,7 @@ Inc/%.o: ../Inc/%.c Inc/subdir.mk
 clean: clean-Inc
 
 clean-Inc:
-	-$(RM) ./Inc/gpio.d ./Inc/gpio.o ./Inc/interrupt_PA0.d ./Inc/interrupt_PA0.o ./Inc/lcd_1602_mode8.d ./Inc/lcd_1602_mode8.o ./Inc/string_func.d ./Inc/string_func.o ./Inc/system_clock.d ./Inc/system_clock.o ./Inc/systick_delay.d ./Inc/systick_delay.o ./Inc/systick_interrupt.d ./Inc/systick_interrupt.o ./Inc/usart.d ./Inc/usart.o ./Inc/usart_rx_interrupt.d ./Inc/usart_rx_interrupt.o
+	-$(RM) ./Inc/gpio.d ./Inc/gpio.o ./Inc/i2c.d ./Inc/i2c.o ./Inc/interrupt_PA0.d ./Inc/interrupt_PA0.o ./Inc/lcd_1602_mode8.d ./Inc/lcd_1602_mode8.o ./Inc/string_func.d ./Inc/string_func.o ./Inc/system_clock.d ./Inc/system_clock.o ./Inc/systick_delay.d ./Inc/systick_delay.o ./Inc/systick_interrupt.d ./Inc/systick_interrupt.o ./Inc/usart.d ./Inc/usart.o ./Inc/usart_rx_interrupt.d ./Inc/usart_rx_interrupt.o
 
 .PHONY: clean-Inc
 

@@ -1,4 +1,5 @@
 "./Inc/gpio.o"
+"./Inc/i2c.o"
 "./Inc/interrupt_PA0.o"
 "./Inc/lcd_1602_mode8.o"
 "./Inc/string_func.o"

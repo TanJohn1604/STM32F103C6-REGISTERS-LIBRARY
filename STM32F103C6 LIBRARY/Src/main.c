@@ -25,6 +25,8 @@
 //#include "systick_interrupt.h"
 //#include "usart.h"
 //#include "usart_rx_interrupt.h"
+#include "i2c.h"
+
 //int interrupt_PA0 =0;
 
 //uint16_t usart1_manager[]={0,0,0,'z',5000,0,1};
@@ -48,17 +50,17 @@ int main(void)
 //	init_systick_interrupt(1000);
 //	init_usart(1, 9600);
 //	init_usart_rx_interrupt(1);
-	lcd_init();
+//	lcd_init();
+	i2c_init(1, i2c_SM);
 
+
+	char data[]="ab";
 	while(1){
 
-		for(int i=0;i<5;i++){
-			delay_ms(200);
-
-			lcd_msg(1, i, "tan dep trai");
-		}
 
 
+		i2c_write(1, 0x78,data);
+		delay_ms(1000);
 
 
 	}
@@ -66,6 +68,3 @@ int main(void)
 
 
 
-//void SysTick_Handler(){
-//	systick_interrupt_time_usart(usart_manager);
-//}
