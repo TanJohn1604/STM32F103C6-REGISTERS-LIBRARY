@@ -16,7 +16,7 @@
  ******************************************************************************
  */
 
-#include "lcd_1602_mode8.h"
+#include "lcd_1602_mode8_4.h"
 #include <stdint.h>
 #include "gpio.h"
 #include "system_clock.h"
@@ -25,7 +25,7 @@
 //#include "systick_interrupt.h"
 //#include "usart.h"
 //#include "usart_rx_interrupt.h"
-#include "i2c.h"
+//#include "i2c.h"
 
 //int interrupt_PA0 =0;
 
@@ -51,17 +51,14 @@ int main(void)
 //	init_usart(1, 9600);
 //	init_usart_rx_interrupt(1);
 //	lcd_init();
-	i2c_init(1, i2c_SM);
+	lcd_init_4();
+//	i2c_init(1, i2c_SM);
 
 
 	char data[]="ab";
+	lcd_msg_4(1, 0,"Welcome to the");
+	lcd_msg_4(2, 6,"WeeW");
 	while(1){
-
-
-
-		i2c_write(1, 0x78,data);
-		delay_ms(1000);
-
 
 	}
 }

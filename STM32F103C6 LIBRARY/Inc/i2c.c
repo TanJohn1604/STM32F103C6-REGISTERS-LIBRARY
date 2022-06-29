@@ -23,7 +23,7 @@ void i2c_init(char i2c,unsigned short speed_mode)
 
 	if(i2c==1)
 	{
-//		AFIO->MAPR =AFIO_MAPR_I2C1_REMAP;
+
 		RCC->APB1ENR |= 0x200000;
 		// Pin enable
 		init_GP(PB,8,OUT50,O_AF_OD);
