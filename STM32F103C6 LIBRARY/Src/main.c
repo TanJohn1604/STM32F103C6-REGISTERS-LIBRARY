@@ -16,7 +16,7 @@
  ******************************************************************************
  */
 
-#include "lcd_1602_mode8_4.h"
+
 #include <stdint.h>
 #include "gpio.h"
 #include "system_clock.h"
@@ -26,10 +26,10 @@
 //#include "usart.h"
 //#include "usart_rx_interrupt.h"
 //#include "i2c.h"
-//#include "lcd_1602_mode8_4.h"
-#include "spi.h"
-
-
+#include "lcd_1602_mode8_4.h"
+//#include "spi.h"
+#include"adc.h"
+#include "string_func.h"
 
 //int interrupt_PA0 =0;
 
@@ -38,7 +38,8 @@
 //
 //uint8_t usart1_data[255]="";
 //uint8_t usart2_data[255]="";
-
+char chuoi[20]="";
+int a;
 int main(void)
 {
 	//cấu hình clock ngoại 8Mhz, bộ chia của các bus cấu hình bằng 1
@@ -55,14 +56,23 @@ int main(void)
 //	init_usart(1, 9600);
 //	init_usart_rx_interrupt(1);
 //	lcd_init();
-//	lcd_init_4();
+	lcd_init_4();
 //	i2c_init(1, i2c_SM);
-	spi_init(1);
+//	spi_init(1);
+	adc_init(1, PA, 0);
+
 
 
 	while(1){
-		delay_ms(1000);
-		spi_1tx_1rx(1);
+		delay_ms(500);
+		if(adc_check(adc1, PA, 0))
+		{
+			a=adc_rx(1, PA, 0);
+			int2char(a, chuoi);
+			lcd_cmd_4(0x01);
+			delay_ms(5);
+			lcd_msg_4(1, 0, chuoi);
+		}
 	}
 }
 

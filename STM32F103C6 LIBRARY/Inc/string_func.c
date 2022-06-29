@@ -66,7 +66,7 @@ for(j= cnt ; j >=0;j--)
 {
 	str[cnt-j] = lstr[j];
 }
-
+str[cnt+1]='\0';
 }
 
 int char2int(char str[])

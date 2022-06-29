@@ -1,3 +1,4 @@
+"./Inc/adc.o"
 "./Inc/gpio.o"
 "./Inc/i2c.o"
 "./Inc/interrupt_PA0.o"

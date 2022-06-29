@@ -143,6 +143,7 @@ void lcd_cmd_4(unsigned char data)
 	GPIOA->ODR |= ((data << 4) & 0x00f0);
 	delay_us(10);
 	lcd_e(LOW);
+//	delay_us(20);
 }
 void lcd_init_4(void)
 {
