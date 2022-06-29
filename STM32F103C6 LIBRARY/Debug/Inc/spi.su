@@ -1,3 +1,4 @@
 spi.c:31:6:spi_init	16	static
 spi.c:72:6:spi_tx	16	static
-spi.c:91:6:spi_msg	24	static
+spi.c:90:6:spi_rx	24	static
+spi.c:118:6:spi_msg	24	static

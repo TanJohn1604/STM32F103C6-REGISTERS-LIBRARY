@@ -62,8 +62,12 @@ int main(void)
 
 	while(1){
 		delay_ms(1000);
-		spi_msg(1, "abcde");
-
+		if(spi_rx(1)==2){
+			W_GP(PC, 13,LOW);
+		}
+		if(spi_rx(1)==3){
+					W_GP(PC, 13,HIGH);
+				}
 	}
 }
 
