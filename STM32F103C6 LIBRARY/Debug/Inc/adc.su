@@ -1,3 +1,3 @@
-adc.c:33:6:adc_init	24	static
-adc.c:89:6:adc_check	24	static
-adc.c:112:5:adc_rx	24	static
+adc.c:50:6:adc_init	24	static
+adc.c:106:6:adc_check	24	static
+adc.c:129:5:adc_rx	24	static

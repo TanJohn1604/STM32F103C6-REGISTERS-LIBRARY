@@ -28,7 +28,24 @@ PC5 -> ADC12_IN15
 ADC12_IN16 input channel which is used to convert the sensor output voltage into a digital value.
 */
 
-
+	// --------------------------- watchdog------------------------------------
+//	ADC1->CR1 |= 0x800000;
+//	ADC1->HTR = 3000;//cận trên
+//	ADC1->LTR = 1000;//cận dưới
+//	ADC1->CR1 |= 0x40;
+//
+//	__disable_irq();
+//	NVIC_EnableIRQ(ADC1_2_IRQn);
+//	__enable_irq();
+	// --------------------------- watchdog------------------------------------
+//void ADC1_2_IRQHandler()
+//{
+//
+//ADC1->CR1 &= ~0x40;
+//ADC1->SR &= ~0x01;
+//
+//W_GP(PC, 13,LOW);
+//}
 
 char adc_init(char adc, short port, short pin)
 {

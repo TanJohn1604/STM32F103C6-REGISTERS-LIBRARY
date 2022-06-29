@@ -61,7 +61,16 @@ int main(void)
 //	spi_init(1);
 	adc_init(1, PA, 0);
 
-
+	// --------------------------- watchdog------------------------------------
+	ADC1->CR1 |= 0x800000;
+	ADC1->HTR = 3000;//cận trên
+	ADC1->LTR = 1000;//cận dưới
+	ADC1->CR1 |= 0x40;
+//
+	__disable_irq();
+	NVIC_EnableIRQ(ADC1_2_IRQn);
+	__enable_irq();
+	// --------------------------- watchdog------------------------------------
 
 	while(1){
 		delay_ms(500);
@@ -76,5 +85,12 @@ int main(void)
 	}
 }
 
+void ADC1_2_IRQHandler()
+{
 
+ADC1->CR1 &= ~0x40;
+ADC1->SR &= ~0x01;
+
+W_GP(PC, 13,LOW);
+}
 
