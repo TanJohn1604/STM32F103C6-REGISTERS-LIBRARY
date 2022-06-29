@@ -9,6 +9,7 @@ C_SRCS += \
 ../Inc/i2c.c \
 ../Inc/interrupt_PA0.c \
 ../Inc/lcd_1602_mode8_4.c \
+../Inc/spi.c \
 ../Inc/string_func.c \
 ../Inc/system_clock.c \
 ../Inc/systick_delay.c \
@@ -21,6 +22,7 @@ OBJS += \
 ./Inc/i2c.o \
 ./Inc/interrupt_PA0.o \
 ./Inc/lcd_1602_mode8_4.o \
+./Inc/spi.o \
 ./Inc/string_func.o \
 ./Inc/system_clock.o \
 ./Inc/systick_delay.o \
@@ -33,6 +35,7 @@ C_DEPS += \
 ./Inc/i2c.d \
 ./Inc/interrupt_PA0.d \
 ./Inc/lcd_1602_mode8_4.d \
+./Inc/spi.d \
 ./Inc/string_func.d \
 ./Inc/system_clock.d \
 ./Inc/systick_delay.d \
@@ -48,7 +51,7 @@ Inc/%.o: ../Inc/%.c Inc/subdir.mk
 clean: clean-Inc
 
 clean-Inc:
-	-$(RM) ./Inc/gpio.d ./Inc/gpio.o ./Inc/i2c.d ./Inc/i2c.o ./Inc/interrupt_PA0.d ./Inc/interrupt_PA0.o ./Inc/lcd_1602_mode8_4.d ./Inc/lcd_1602_mode8_4.o ./Inc/string_func.d ./Inc/string_func.o ./Inc/system_clock.d ./Inc/system_clock.o ./Inc/systick_delay.d ./Inc/systick_delay.o ./Inc/systick_interrupt.d ./Inc/systick_interrupt.o ./Inc/usart.d ./Inc/usart.o ./Inc/usart_rx_interrupt.d ./Inc/usart_rx_interrupt.o
+	-$(RM) ./Inc/gpio.d ./Inc/gpio.o ./Inc/i2c.d ./Inc/i2c.o ./Inc/interrupt_PA0.d ./Inc/interrupt_PA0.o ./Inc/lcd_1602_mode8_4.d ./Inc/lcd_1602_mode8_4.o ./Inc/spi.d ./Inc/spi.o ./Inc/string_func.d ./Inc/string_func.o ./Inc/system_clock.d ./Inc/system_clock.o ./Inc/systick_delay.d ./Inc/systick_delay.o ./Inc/systick_interrupt.d ./Inc/systick_interrupt.o ./Inc/usart.d ./Inc/usart.o ./Inc/usart_rx_interrupt.d ./Inc/usart_rx_interrupt.o
 
 .PHONY: clean-Inc
 

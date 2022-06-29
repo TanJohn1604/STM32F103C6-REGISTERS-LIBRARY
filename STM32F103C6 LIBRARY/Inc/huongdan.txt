@@ -42,7 +42,9 @@ nếu mode là systick interrupt time
  	hàm systick_interrupt_time_usart(usart_manager) phải được đặt trong void SysTick_Handler()
 
  
- 
+ -----------------------------------------------------------------------------------
+ spi2 và i2c2 bị lỗi với file starup stm32f1xxx.h
+ -----------------------------------------------------------------------------------
  
  
  

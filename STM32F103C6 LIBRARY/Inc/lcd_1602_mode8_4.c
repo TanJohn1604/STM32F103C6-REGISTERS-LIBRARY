@@ -90,13 +90,13 @@ void lcd_init(void)
 {
 	pin_output(0,11);
 	delay_ms(20);
-	lcd_cmd(0x3C); // 8 bit communication mode / 2 lines
+	lcd_cmd(0x3C); // 8 bit mode / 2 lines
 	delay_ms(5);
-	lcd_cmd(0x0C); // Display ON
+	lcd_cmd(0x0C); // Bat hien thi man hinh
 	delay_ms(5);
-	lcd_cmd(0x01); // Clear Display
+	lcd_cmd(0x01); // Xoa man hinh
 	delay_ms(5);
-	lcd_cmd(0x02); // Get back to initial address
+	lcd_cmd(0x02); // Dua con tro ve vi tri ban dau
 	delay_ms(5);
 }
 
@@ -154,7 +154,7 @@ void lcd_init_4(void)
 	lcd_e(HIGH);
 	delay_us(5);
 	GPIOA->ODR &= 0xff0f;
-	GPIOA->ODR |= 0x30; // 8 bit communication mode
+	GPIOA->ODR |= 0x30; // 8 bit mode
 	delay_us(10);
 	lcd_e(LOW);
 
@@ -166,7 +166,7 @@ void lcd_init_4(void)
 	lcd_e(HIGH);
 	delay_us(5);
 	GPIOA->ODR &= 0xff0f;
-	GPIOA->ODR |= 0x30; // 8 bit communication mode
+	GPIOA->ODR |= 0x30; // 8 bit mode
 	delay_us(10);
 	lcd_e(LOW);
 
@@ -178,7 +178,7 @@ void lcd_init_4(void)
 	lcd_e(HIGH);
 	delay_us(5);
 	GPIOA->ODR &= 0xff0f;
-	GPIOA->ODR |= 0x30; // 8 bit communication mode
+	GPIOA->ODR |= 0x30;// 8 bit mode
 	delay_us(10);
 	lcd_e(LOW);
 
@@ -190,18 +190,18 @@ void lcd_init_4(void)
 	lcd_e(HIGH);
 	delay_us(5);
 	GPIOA->ODR &= 0xff0f;
-	GPIOA->ODR |= 0x20; // 4 bit communication mode
+	GPIOA->ODR |= 0x20; // 4 bit mode
 	delay_us(10);
 	lcd_e(LOW);
 
 
 	lcd_cmd_4(0x2C); // 4 bit communication mode / 2 lines
 	delay_ms(5);
-	lcd_cmd_4(0x0C); // Display ON
+	lcd_cmd_4(0x0C); // Bat man hinh
 	delay_ms(5);
-	lcd_cmd_4(0x01); // Clear Display
+	lcd_cmd_4(0x01); // Xoa man hinh
 	delay_ms(5);
-	lcd_cmd_4(0x02); // Get back to initial address
+	lcd_cmd_4(0x02); // Tro ve vi tri ban dau
 	delay_ms(5);
 }
 

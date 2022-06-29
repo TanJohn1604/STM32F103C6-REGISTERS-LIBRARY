@@ -26,6 +26,10 @@
 //#include "usart.h"
 //#include "usart_rx_interrupt.h"
 //#include "i2c.h"
+//#include "lcd_1602_mode8_4.h"
+#include "spi.h"
+
+
 
 //int interrupt_PA0 =0;
 
@@ -51,14 +55,14 @@ int main(void)
 //	init_usart(1, 9600);
 //	init_usart_rx_interrupt(1);
 //	lcd_init();
-	lcd_init_4();
+//	lcd_init_4();
 //	i2c_init(1, i2c_SM);
+	spi_init(1);
 
 
-	char data[]="ab";
-	lcd_msg_4(1, 0,"Welcome to the");
-	lcd_msg_4(2, 6,"WeeW");
 	while(1){
+		delay_ms(1000);
+		spi_msg(1, "abcde");
 
 	}
 }
