@@ -48,6 +48,9 @@ nếu mode là systick interrupt time
  void spi_1tx_1rx(unsigned short spi);
  => gửi 1 byte temptx, rồi đọc 1 byte đệm temprx, gán temptx=temprx; để lần sau gửi
  temptx và temprx kiểu static
- 
+ -----------------------------------------------------------------------------------
+ adc 
+ protues mô phỏng thì 5v tối đa đầu vào analog
+ thực tế là 3.3 chứ nhỉ
  
  
