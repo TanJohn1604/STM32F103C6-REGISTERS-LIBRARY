@@ -45,6 +45,9 @@ nếu mode là systick interrupt time
  -----------------------------------------------------------------------------------
  spi2 và i2c2 bị lỗi với file starup stm32f1xxx.h
  -----------------------------------------------------------------------------------
+ void spi_1tx_1rx(unsigned short spi);
+ => gửi 1 byte temptx, rồi đọc 1 byte đệm temprx, gán temptx=temprx; để lần sau gửi
+ temptx và temprx kiểu static
  
  
  
