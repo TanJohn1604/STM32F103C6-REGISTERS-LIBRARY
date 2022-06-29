@@ -62,12 +62,7 @@ int main(void)
 
 	while(1){
 		delay_ms(1000);
-		if(spi_rx(1)==2){
-			W_GP(PC, 13,LOW);
-		}
-		if(spi_rx(1)==3){
-					W_GP(PC, 13,HIGH);
-				}
+		spi_1tx_1rx(1);
 	}
 }
 

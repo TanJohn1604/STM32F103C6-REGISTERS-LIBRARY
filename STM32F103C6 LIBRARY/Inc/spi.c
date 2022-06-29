@@ -73,7 +73,8 @@ void spi_tx(unsigned short spi, char tx_char)
 {
 	if (spi ==1 )
 	{
-		W_GP(PA,4,LOW); //
+		W_GP(PA,4,LOW);
+
 		SPI1->DR = tx_char;
 		while(SPI1->SR & SPI_SR_BSY){}
 		W_GP(PA,4,HIGH);
@@ -114,6 +115,26 @@ char spi_rx(unsigned short spi)
 	return (char)temp;
 }
 
+void spi_1tx_1rx(unsigned short spi){
+	static char temptx;
+	static char temprx;
+
+
+		if (spi ==1 )
+		{
+			W_GP(PA,4,LOW);
+
+
+			while(SPI1->SR & 0x80){}
+			SPI1->DR=temptx;
+			while(!(SPI1->SR & 0x1));
+			temprx = SPI1->DR;
+
+			temptx=temprx;
+
+			W_GP(PA,4,HIGH);
+		}
+}
 
 void spi_msg(unsigned short spi, char str[])
 {
